@@ -1,0 +1,248 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.get-a-quote {
+  background-color: #f06c64;
+}
+.wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 62px;
+}
+.wrapper-contact {
+  height: 654px;
+  border-bottom: solid #ea676b 6px;
+  padding-top: -1px;
+}
+h2 {
+  padding-bottom: 20px;
+  font-size: 30px;
+  line-height: 1;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 900;
+  text-align: left;
+  letter-spacing: -0.01px;
+}
+.text_under_head {
+  font-size: 18px;
+  line-height: 30px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: 0.1px;
+  justify-content: center;
+}
+
+.layout-2-colomn {
+  margin-top: 46px;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 620px 300px;
+}
+.form-colomn {
+    position: relative;
+    display: grid;
+    grid-template-rows: 38px 38px 38px;
+    grid-template-columns: auto;
+    grid-row-gap: 16px;
+
+  font-size: 12px;
+  line-height: 22px;
+  color: #f48c8f;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: left;
+}
+input,
+textarea {
+  border: none;
+  background-color: #d6564f;
+  padding: 11px 0px 12px 14px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 202px;
+  padding: 8px 0px 12px 14px;
+}
+
+textarea,
+input::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 22px;
+  color: #f48c8f;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: left;
+}
+input::-moz-placeholder {
+  font-size: 12px;
+  line-height: 22px;
+  color: #f48c8f;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: left;
+}
+
+button {
+  min-width: 120px;
+  line-height: 2rem;
+  font-size: 18px;
+  color: rosybrown;
+  background: #a72922;
+  border: none;
+  font-family: "Lato";
+  font-weight: 300;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.get-a-quote_contact {
+  margin-top: -2px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 18px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 900;
+  text-align: left;
+  padding-top: 2px;
+  letter-spacing: -0.15px;
+}
+.info_contact {
+  margin-top:9px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: -0.04px;
+  justify-content: center;
+}
+.info_contact a {
+  font-size: 12px;
+  line-height: 22px;
+  color: #f0d8d9;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+}
+.info_contact p:first-child {
+  padding-bottom: 21px;
+}
+
+.info_contact p:nth-child(n + 2) {
+  grid-column-gap: 10px;
+  display: grid;
+  grid-template-columns: 12px auto;
+  align-items: center;
+}
+
+.ico {
+  width: 15px;
+  height: 12px;
+  background-repeat: no-repeat;
+}
+.ico_location {
+    margin-left: 2px;
+  background-image: url("assets/images/mini_location.png");
+}
+.ico_phone {
+  background-image: url("assets/images/mini_phone.png");
+}
+.ico_mail {
+    margin-top: 5px;
+  background-image: url("assets/images/mini_mail.png");
+}
+
+
+footer {
+  width: 100%;
+  height: 76px;
+  background-color: #2d303a;
+}
+.footer-navigation {
+  padding: 22px 32px 0px 42px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 40px 40px 40px 40px;
+}
+.copyright {
+  font-size: 12px;
+  line-height: 22px;
+  color: #5e657e;
+  font-family: "Lato";
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: -0.15px;
+}
+
+.facebook,
+.google,
+.twitter,
+.linkedin {
+  height: 32px;
+  width: 32px;
+}
+.facebook {
+  background-image: url("assets/images/facebook.png");
+}
+.google {
+  background-image: url("assets/images/google.png");
+}
+.twitter {
+  background-image: url("assets/images/twitter.png");
+}
+.linkedin {
+  background-image: url("assets/images/linkedin.png");
+}
+.facebook,
+.google,
+.twitter,
+.linkedin:hover {
+  cursor: pointer;
+}
+
+input, textarea {
+    outline: none;
+ }
+
+input:valid:focus {
+    border: solid 2px rgba(37, 102, 65,0.5);
+
+    
+   }
+    input:invalid:focus {
+    border: solid 2px rgba(209, 54, 54,0.5);
+ 
+   
+  }
+  textarea:valid:focus {
+    border: solid 2px rgba(37, 102, 65,0.5);  
+   }
+    textarea:invalid:focus {
+        border: solid 2px rgba(209, 54, 54,0.5);
+ 
+   
+  }
+  
