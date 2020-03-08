@@ -1,1 +1,2 @@
-https://juliebulakh.github.io/singolo/index.html
+https://juliebulakh.github.io/singolo/
+
