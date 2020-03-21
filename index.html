@@ -5,28 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/fonts.css">
+    <!-- <link rel="stylesheet" href="assets/fonts.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap"
+    rel="stylesheet"/> -->
     <title>Singolo</title>
 </head>
-    <header class="header">
+<body>
+    <header class="header hidden_conteiner">
         <div class="conteiner_header">
         <div class="conteiner__logo">
             <h1 class="header__logo">singolo<span class="label__logo">*</span></h1></div>
         <div class="conteiner__nav">
-            <ul class="navigation">
-                <li>HOME</li>
-                <li>SERVICES</li>
-                <li>PORTFOLIO</li>
-                <li>ABOUT</li>
-                <li>CONTACT</li>
+            <ul class="navigation" id="navigation">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
             </div>
         </div>
-</div>
     </header>
-
     <!-- Проверить на валидаторе -->
-    <section class="wrapper_phones">
+    <!-- <section>
+        <img src="assets/images/Slider.png">
+    </section> -->
+    <section class="wrapper_phones" id="home">
         <div class="wrapper_phone">
             <div class="shadow_phone"></div>
             <div class="phone"></div>
@@ -39,17 +43,15 @@
         </div>
         <div class="slider__bottom-1 cursor"></div>
         <div class="slider__bottom-2 cursor"></div>
-    
-    
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="wrapper_services">
                 <h2>Our Services</h2>
                 <p class="services_1">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
                     nisi erat porttitor
                     ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                 </p>
-                <ul class="types_services">
+                <ul class="types_services" >
                     <li class="row">
                         <img src="assets/images/pen.png">
                         <h3>Custom Design</h3>
@@ -89,36 +91,34 @@
                     </li>
                 </ul>
     </section>
-    
-    <section class="container_portfolio">
+
+    <section class="container_portfolio" id="portfolio">
         <h2 >Portfolio</h2>
         <p class="text_under_head text_portfolio">Duis mollis, est non commodo luctus, nisi
             erat porttitor ligula, eget lacinia odio sem nec elit.
         </p>
-        <div class="buttom_select_images">
-                <span>All</span>
-                <span>Web Design</span>
-                <span>Graphic Design</span>
-                <span>Artwork</span>
-            </ul>
+        <div class="buttom_select_images" id="buttons_images">
+                <span id="all">All</span>
+                <span id="web">Web Design</span>
+                <span id="graphic">Graphic Design</span>
+                <span id="artwork">Artwork</span>
         </div>
-        <div class="wrapper_images">     
-            <img src="assets/images/portfolio_image_1.png">
-            <img src="assets/images/portfolio_image_2.png">
-            <img src="assets/images/portfolio_image_3.png">
-            <img src="assets/images/portfolio_image_4.png">
-            <img src="assets/images/portfolio_image_5.png">
-            <img src="assets/images/portfolio_image_6.png">
-            <img src="assets/images/portfolio_image_7.png">
-            <img src="assets/images/portfolio_image_8.png">
-            <img src="assets/images/portfolio_image_9.png">
-            <img src="assets/images/portfolio_image_10.png">
-            <img src="assets/images/portfolio_image_11.png">
-            <img src="assets/images/portfolio_image_12.png">
+        <div class="wrapper_images" id="wrapper_images">     
+            <img src="assets/images/portfolio_image_1.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_2.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_3.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_4.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_5.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_6.png"  width="220" height="187">
+            <img src="assets/images/portfolio_image_7.png"  width="220" height="187">
+            <img src="assets/images/portfolio_image_8.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_9.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_10.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_11.png" width="220" height="187">
+            <img src="assets/images/portfolio_image_12.png" width="220" height="187">
     
-        </div>
     </section>
-    <section class="about_us">
+    <section class="about_us" id="about">
         <h2>About Us</h2>
         <p class="text_under_head text_portfolio">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
             nisi erat porttitor
@@ -163,7 +163,7 @@
             </div>
          </div>
     </section>
-    <section class="get-a-quote">
+    <section class="get-a-quote" id="contact">
         <div class="wrapper wrapper_contact">
             <h2>Get a Quote</h2>
             <p class="text_under_head text_contact">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -174,17 +174,17 @@
                 <div class="get-a-quote_form">
                     <form action="" method="POST">
                         <div class="form-colomn">
-                        <input type="text" name="name" placeholder="Name (Required)" required >
-                        <input type="email" name="email" placeholder="Email (Required)" required >
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="describe-project" >Describe your project in detail...
-                        </textarea>
+                        <input type="text" name="name" id="name" placeholder="Name (Required)" required >
+                        <input type="email" name="email" id="email" placeholder="Email (Required)" required >
+                        <input type="text" name="subject" id="subject" placeholder="Subject">
+                        <textarea name="describe-project" id="description" placeholder="Describe your project in detail..." maxlength='1000'></textarea>
                         <div class="get-a-quote_button">
-                            <button type="submit" class="button">Submit</button>
+                            <button type="submit" class="button" id="button">Submit</button>
                         </div>
                     </div>
                     </form>
                 </div>
+                
                 <div class="get-a-quote_contact">
                     <h3>Contact Information</h3>
                     <div class="info_contact">
@@ -195,7 +195,7 @@
                     <p><span class="ico ico_location"></span>
                         <a href="">Elm St. 14/05 Lost City </a></p>
                     <p><span class="ico ico_phone"></span><a href="tel:  03528 331 86 35 "> 03528 331 86 35 </a></p>
-                    <p><span class="ico ico_mail"></span><a href="info@singolo.com">info@singolo.com</a></p>
+                    <p><span class="ico ico_mail"></span><a href="mailo: info@singolo.com">info@singolo.com</a></p>
                 </div>
             </div>
             </div>
@@ -212,7 +212,7 @@
 
     </footer>
 
-
+<script src="script.js"></script>
 
 </body>
 
