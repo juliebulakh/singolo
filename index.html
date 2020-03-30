@@ -27,22 +27,26 @@
         </div>
     </header>
     <!-- Проверить на валидаторе -->
-    <!-- <section>
-        <img src="assets/images/Slider.png">
-    </section> -->
-    <section class="wrapper_phones" id="home">
-        <div class="wrapper_phone">
-            <div class="shadow_phone"></div>
-            <div class="phone"></div>
-            <div class="screen__phone"></div>
+    <section class="slider_phones">
+        <div class="wrapper_slider">
+            <div class="wrapper_phones active active_index" >
+                <div class="wrapper_phone">
+                    <div class="shadow_phone" ></div>
+                    <div class="phone" id="phone-1"></div>
+                    <div class="screen__phone" id="screen-1"></div>
+                </div>
+            
+
+                <div class="wrapper_phone-2">
+                    <div class="shadow_phone rotate_shadow_phone-2"></div>
+                    <div class="phone rotate_phone-2" id="phone-2"></div>
+                    <div class="screen__phone-2" id="screen-2"></div>
+                </div>
+            </div>
+            <img src="assets/images/Slider.png" >
         </div>
-        <div class="wrapper_phone-2 ">
-            <div class="shadow_phone rotate_shadow_phone-2"></div>
-            <div class="phone rotate_phone-2"></div>
-            <div class="screen__phone-2"></div>
-        </div>
-        <div class="slider__bottom-1 cursor"></div>
-        <div class="slider__bottom-2 cursor"></div>
+        <div class="bottom_right"></div>
+        <div class="bottom_left"></div>
     </section>
     <section class="services" id="services">
         <div class="wrapper_services">
@@ -163,7 +167,7 @@
             </div>
          </div>
     </section>
-    <section class="get-a-quote" id="contact">
+    <section class="get-a-quote">
         <div class="wrapper wrapper_contact">
             <h2>Get a Quote</h2>
             <p class="text_under_head text_contact">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -209,8 +213,16 @@
             <p class ="twitter"></p>
             <p class ="linkedin"></p>
         </div>
-
     </footer>
+    <div id="message-block" class="hidden">
+        <div id="message">
+            <p> The letter was sent<br>
+                 <span id="result_subject"></span></p>
+                 <span id="result_description"></span></p>
+            <br>
+            <button id="close-btn">OK</button>
+        </div>
+    </div>
 
 <script src="script.js"></script>
 

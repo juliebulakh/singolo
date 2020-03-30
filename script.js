@@ -1,7 +1,6 @@
 console.log("Hello world!");
 
 // ----------------NAVIGATION SCROLL-----------------------
-
 document.addEventListener("scroll", onScroll);
 
 function onScroll(event) {
@@ -23,28 +22,73 @@ function onScroll(event) {
 
 // ------------------------SLIDER-----------------------
 
+const slides = document.querySelectorAll(".wrapper_phones, .wrapper_slider img");
+let current = 0;
+let isEnabled = true;
 
+function changeCurrentSlide(n) { 
+  current = (n + slides.length) % slides.length;
+}
+function hideSlide(direction) { 
+  isEnabled = false;
+  slides[current].classList.remove('active_index');
+  slides[current].classList.add(direction);
+  slides[current].addEventListener('animationend', function () {
+    this.classList.remove('active','active_index', direction);
+   
+   })
+}
+function showSlide(direction) { 
+  slides[current].classList.add('next',direction);
+  slides[current].addEventListener('animationend', function () {
+    this.classList.remove('next',direction);
+    this.classList.add('active', 'active_index');
+    isEnabled = true;
+   })
+}
+function previousSlide() { 
+  hideSlide('to-right');
+  changeCurrentSlide(current-1);
+  showSlide('from-left');
+}
 
+function nextSlide() { 
+  hideSlide('to-left');
+  changeCurrentSlide(current + 1);
+  showSlide('from-right');
+}
 
+document.querySelector('.bottom_left').addEventListener('click', function () { 
+  if (isEnabled) { 
+    previousSlide(current);
+  }
+})
+  
+document.querySelector('.bottom_right').addEventListener('click', function () { 
+  if (isEnabled) { 
+    nextSlide(current);
+  }
+})
+// ------------SCREEN PHONE----------------------
+const SCREENS = document.querySelectorAll(".screen__phone, .screen__phone-2");
+const PHONES = document.querySelectorAll(".phone, .rotate_phone-2");
 
-// const addTagsClickHandler = () => {
-
-// }
-
-// const NAV = document.getElementById("navigation");
-
-// NAV.addEventListener("click", event => {
-//   NAV.querySelectorAll("a").forEach(el => el.classList.remove("active"));
-//   event.target.classList.add("active");
-// });
-
+document.getElementById("phone-1").addEventListener('click', (event) => {
+  let screen = document.getElementById("screen-1").classList;
+  (screen.contains('screen__phone'))?screen.remove('screen__phone'):screen.add('screen__phone');
+});
+document.getElementById("phone-2").addEventListener('click', (event) => {
+  let screen = document.getElementById("screen-2").classList;
+  (screen.contains('screen__phone-2'))?screen.remove('screen__phone-2'):screen.add('screen__phone-2');
+});
 
 // ------------PORTFOLIO IMAGES---------------------------
 const PORTFOLIO = document.getElementById("buttons_images");
 const IMAGES = document.getElementById("wrapper_images");
 
+
 IMAGES.addEventListener('click', (event) => {
-    //    PORTFOLIO.querySelectorAll('img').forEach(el=> el.classList.remove('active_images'));
+   
     let item = event.target;
     if (item.classList.contains('active_images')) {
         IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('active_images'));
@@ -89,11 +133,6 @@ function shufflePortfolioImages() {
 }
 
 
-
-
-
-
-
 const BUTTON = document.getElementById("button");
 const CLOSE_BUTTON = document.getElementById("close-btn");
 const email = document.getElementById("email");
@@ -104,7 +143,8 @@ BUTTON.addEventListener('click', () => {
     const subject = document.getElementById("subject").value.toString();
     document.getElementById("result_description").innerText = description ? "Description: " + description : "Without description";
     document.getElementById("result_subject").innerText = subject ? "Subject: " + subject : "Without subject";
-    document.getElementById("message-block").classList.remove('hidden');
+  document.getElementById("message-block").classList.remove('hidden');
+  
 })
 
 CLOSE_BUTTON.addEventListener('click', (event) => {
